@@ -90,7 +90,7 @@
 			var uploadBtn = createFileInput(imageUpload);
 			uploadBtn.parent('inputbtn');
 			  // create canvas
-			  var c = createCanvas(200, 200);
+			  var c = createCanvas(350, 350);
 			  background('#fff');
 			  c.parent('canvas');
 			  // Add an event for when a file is dropped onto the canvas
@@ -127,10 +127,10 @@
 		    redraw();
 		    var img = createImg(file.data).hide();
 		    // Draw the image onto the canvas
-		   image(img, 0, 0, width , height);
+		   image(img, 0, 0, 250 , 250);
 
 		   
-		   image(mask, 0, 0, width, height);
+		   image(mask, 0, 0, 250, 250);
 		  } else {
 		    println('Not an Photos file!');
 		  }
@@ -140,8 +140,8 @@
 		    img = loadImage(file.data,function(){
 		    	background('#fff');
 		    	redraw();
-		    	image(img, 0, 0, width , height);
-		        image(mask,0,0,width,height);
+		    	image(img, 0, 0, 250 , 250);
+		        image(mask,0,0,250,250);
 		    })        
 		}
 	</script>
